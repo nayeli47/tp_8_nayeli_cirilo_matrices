@@ -1,2 +1,2 @@
 # tp_8_nayeli_cirilo_matrices
-hecho por Nayeli Cirilo de 4_2 computación
+El ejercicio 'TP8_NAYELI_5' es el ´6´.
