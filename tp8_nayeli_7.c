@@ -20,17 +20,17 @@ int main(int argc, char *argv[]) {
 	float cuentas[100][6] = {0};
 	int i, j, numeroCuenta, codigoTransaccion, monto;
 	
-	printf("Bienvenido al sistema de gesti髇 de cuentas bancarias.\n");
+	printf("Bienvenido al sistema de gesti贸n de cuentas bancarias.\n");
 	
 	do {
-		printf("Ingrese n鷐ero de cuenta del cliente (0 para salir): ");
+		printf("Ingrese n煤mero de cuenta del cliente (0 para salir): ");
 		scanf("%d", &numeroCuenta);
 		
 		if (numeroCuenta == 0) {
 			break;
 		}
 		
-		printf("Ingrese c骴igo de transacci髇 (1: Dep髎ito, 2: Retiro, 3: Comisiones Deducidas, 4: Intereses Acreditados): ");
+		printf("Ingrese c贸digo de transacci贸n (1: Dep贸sito, 2: Retiro, 3: Comisiones Deducidas, 4: Intereses Acreditados): ");
 		scanf("%d", &codigoTransaccion);
 		
 		printf("Ingrese Monto: ");
@@ -51,13 +51,12 @@ int main(int argc, char *argv[]) {
 		printf("\n");
 	}
 	
-	// Encontrar las tres primeras cuentas con el mayor dep髎ito
-	int indices[3] = {-1, -1, -1}; // Inicializar los 韓dices con valores inv醠idos
+	
+	int indices[3] = {-1, -1, -1}; // Inicializar los 铆ndices con valores inv谩lidos
 	for (i = 0; i < 100; i++) {
 		for (j = 0; j < 3; j++) {
 			if (indices[j] == -1 || cuentas[i][1] > cuentas[indices[j]][1]) {
-				// Encontrado un dep髎ito m醩 grande que uno de los anteriores
-				// Mover los 韓dices correspondientes
+				
 				for (int k = 2; k > j; k--) {
 					indices[k] = indices[k - 1];
 				}
@@ -67,10 +66,10 @@ int main(int argc, char *argv[]) {
 		}
 	}
 	
-	printf("\nTres primeras cuentas con el mayor dep髎ito: \n");
+	printf("\nTres primeras cuentas con el mayor dep贸sito: \n");
 	for (i = 0; i < 3; i++) {
 		if (indices[i] != -1) {
-			printf("Nro Cuenta %.0f -- Dep髎ito %.2f\n", cuentas[indices[i]][0], cuentas[indices[i]][1]);
+			printf("Nro Cuenta %.0f -- Dep贸sito %.2f\n", cuentas[indices[i]][0], cuentas[indices[i]][1]);
 		}
 	}
 	
