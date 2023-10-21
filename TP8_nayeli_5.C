@@ -5,9 +5,10 @@
 int main(int argc, char *argv[])
 {
     int sorteos[3][6] = {{0}, {0}};
-    int loto[2][43] = {{0}, {0}};
     srand(time(NULL));
-    int i, j, k, l, numeroIngresado = 0, n, conteo1 = 0, conteo2 = 0, auxiliar;
+    int loto[2][43] = {{0}, {0}},i, j, k, l, numeroIngresado = 0, n, conteo1 = 0, conteo2 = 0, auxiliar;
+    
+   
     
     for (i = 0; i < 3; i++)
     {
